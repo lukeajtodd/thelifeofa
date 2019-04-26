@@ -25,8 +25,8 @@ export default {
 };
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
+<style lang="postcss">
+p {
+  font-size: responsive;
 }
 </style>

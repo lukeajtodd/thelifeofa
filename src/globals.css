@@ -1,0 +1,10 @@
+:root {
+  --primary: #030045;
+  --header: #d8fcff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
