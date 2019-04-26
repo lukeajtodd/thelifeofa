@@ -9,6 +9,7 @@
   "dependencies": {
     "apollo-link-context": "^1.0.17",
     "apollo-link-http": "^1.5.14",
+    "graphql-tag": "^2.10.1",
     "gridsome": "^0.5.0",
     "node-fetch": "^2.4.0"
   }
