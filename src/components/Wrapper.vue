@@ -13,9 +13,18 @@
 </template>
 
 <style lang="postcss">
+$breakpoint-sm: 750px;
+$breakpoint-md: 1280px;
+$breakpoint-lg: 1700px;
+
 .wrapper {
   display: flex;
+  flex-direction: column;
   height: 100%;
+
+  @media screen and (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
 }
 
 .left {
@@ -35,33 +44,73 @@
     margin: 0;
     margin-bottom: 2rem;
   }
+
+  @media screen and (min-width: $breakpoint-md) {
+    max-width: 1050px;
+  }
 }
 
 .left,
 .right {
-  flex: 0 0 50%;
+  flex: 0 0 100%;
+
+  @media screen and (min-width: $breakpoint-md) {
+    flex: 0 0 50%;
+  }
 }
 
 .earth-bg {
-  width: 130%;
+  width: calc(100vw + 400px);
   position: absolute;
   bottom: 0;
   transform: translateY(55%);
+
+  @media screen and (min-width: $breakpoint-md) {
+    width: 160%;
+    max-width: 1680px;
+  }
 }
 
 .city-bg {
   width: 100%;
-  max-width: 260px;
+  max-width: 35vw;
   position: absolute;
-  bottom: 5%;
+  left: 10vw;
+  bottom: 5vw;
   z-index: 2;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    max-width: 180px;
+    left: auto;
+    bottom: 10vw;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    max-width: 210px;
+    bottom: 6%;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    bottom: 10%;
+  }
 }
 
 .stars-bg {
-  width: 100%;
-  max-width: 30vw;
+  width: 160%;
+  max-width: 900px;
   position: absolute;
+  transform: translateX(5%);
   top: 10%;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    width: 60vw;
+    max-width: auto;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    width: 30vw;
+    max-width: 630px;
+  }
 }
 </style>
 
