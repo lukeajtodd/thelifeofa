@@ -1,8 +1,17 @@
 <template>
   <div class="wrapper">
+    <a class="menu-button__wrapper" @click="toggleNav" v-if="!open">
+      <Menu class="menu-button" />
+    </a>
+    <a class="close-button__wrapper" @click="toggleNav" v-else>
+      <Close class="close-button" />
+    </a>
+    <Navigation :open="open" />
     <div class="left">
       <Stars class="stars-bg" />
-      <h1>the life of a</h1>
+      <g-link class="home-link" to="/">
+        <h1>the life of a</h1>
+      </g-link>
       <City class="city-bg" />
       <Earth class="earth-bg" />
     </div>
@@ -25,6 +34,37 @@ $breakpoint-lg: 1700px;
   @media screen and (min-width: $breakpoint-md) {
     flex-direction: row;
   }
+}
+
+.home-link {
+  color: var(--header);
+}
+
+.menu-button,
+.close-button {
+  width: 21px;
+  height: 21px;
+  pointer-events: none;
+
+  &__wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    &__wrapper {
+      bottom: auto;
+      top: 30px;
+    }
+  }
+}
+
+.close-button {
+  width: 23px;
+  height: 23px;
 }
 
 .left {
@@ -130,12 +170,16 @@ $breakpoint-lg: 1700px;
 import Earth from './svgs/earth';
 import City from './svgs/city';
 import Stars from './svgs/stars';
+import Menu from './svgs/menu';
+import Close from './svgs/close';
+import Navigation from './Navigation';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 export default {
   name: 'Wrapper',
   data() {
     return {
+      open: false,
       ps: null
     };
   },
@@ -145,8 +189,12 @@ export default {
   },
   beforeDestroy() {
     this.destroyScroll();
+    window.removeEventListener('resize', this.resizeHandler);
   },
   methods: {
+    toggleNav() {
+      this.open = !this.open;
+    },
     resizeHandler() {
       if (window.innerWidth < 1280) {
         this.destroyScroll();
@@ -179,7 +227,7 @@ export default {
       });
     }
   },
-  components: { Earth, City, Stars }
+  components: { Earth, City, Stars, Navigation, Menu, Close }
 };
 </script>
 
