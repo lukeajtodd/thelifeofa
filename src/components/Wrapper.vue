@@ -28,6 +28,7 @@ $breakpoint-lg: 1700px;
 }
 
 .left {
+  flex: 0 0 100%;
   position: relative;
   background-color: var(--primary);
   color: var(--header);
@@ -52,8 +53,6 @@ $breakpoint-lg: 1700px;
 
 .left,
 .right {
-  flex: 0 0 100%;
-
   @media screen and (min-width: $breakpoint-md) {
     flex: 0 0 50%;
   }
