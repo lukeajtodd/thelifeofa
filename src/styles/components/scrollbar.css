@@ -1,0 +1,31 @@
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+.ps__rail-y {
+  position: absolute;
+  right: 0;
+  width: var(--bar-width);
+}
+
+.ps__thumb-y {
+  position: relative;
+  background-color: var(--primary);
+  width: var(--bar-width);
+  border-radius: 0;
+  right: 0;
+}
+
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-y.ps--clicking {
+  background-color: transparent;
+}
+
+.ps__rail-y:hover > .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y.ps--clicking .ps__thumb-y {
+  background-color: var(--primary);
+  width: var(--bar-width);
+}

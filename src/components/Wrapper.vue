@@ -59,6 +59,19 @@ $breakpoint-lg: 1700px;
   }
 }
 
+.right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 100px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    overflow: hidden;
+    flex: 1;
+  }
+}
+
 .earth-bg {
   width: calc(100vw + 400px);
   position: absolute;
@@ -118,9 +131,55 @@ $breakpoint-lg: 1700px;
 import Earth from './svgs/earth';
 import City from './svgs/city';
 import Stars from './svgs/stars';
+import PerfectScrollbar from 'perfect-scrollbar';
 
 export default {
   name: 'Wrapper',
+  data() {
+    return {
+      ps: null
+    };
+  },
+  mounted() {
+    this.resizeHandler();
+    window.addEventListener('resize', this.resizeHandler);
+  },
+  beforeDestroy() {
+    this.destroyScroll();
+  },
+  methods: {
+    resizeHandler() {
+      if (window.innerWidth < 1280) {
+        this.destroyScroll();
+        this.bodyScroll();
+      } else {
+        this.destroyScroll();
+        this.rightScroll();
+      }
+    },
+    destroyScroll() {
+      if (this.ps) {
+        this.ps.destroy();
+        this.ps = null;
+      }
+    },
+    rightScroll() {
+      this.ps = new PerfectScrollbar('.right', {
+        wheelSpeed: 2,
+        wheelPropagation: true,
+        minScrollbarLength: 20,
+        suppressScrollX: true
+      });
+    },
+    bodyScroll() {
+      this.ps = new PerfectScrollbar('#app', {
+        wheelSpeed: 2,
+        wheelPropagation: true,
+        minScrollbarLength: 20,
+        suppressScrollX: true
+      });
+    }
+  },
   components: { Earth, City, Stars }
 };
 </script>

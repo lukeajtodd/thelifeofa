@@ -6,7 +6,20 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: [],
+  transformers: {
+    remark: {}
+  },
+
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'blog/**/*.md',
+        typeName: 'Post',
+        route: 'blog/:slug'
+      }
+    }
+  ],
   chainWebpack: config => {
     config.module
       .rule('postcss')

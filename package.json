@@ -11,9 +11,14 @@
     "apollo-link-http": "^1.5.14",
     "graphql-tag": "^2.10.1",
     "gridsome": "^0.5.0",
-    "node-fetch": "^2.4.0"
+    "node-fetch": "^2.4.0",
+    "perfect-scrollbar": "^1.4.0",
+    "typeface-old-standard-tt": "^0.0.71",
+    "typeface-pt-sans": "^0.0.72"
   },
   "devDependencies": {
+    "@gridsome/source-filesystem": "^0.3.0",
+    "@gridsome/transformer-remark": "^0.2.1",
     "autoprefixer": "^9.4.9",
     "file-loader": "^3.0.1",
     "postcss": "^7.0.14",

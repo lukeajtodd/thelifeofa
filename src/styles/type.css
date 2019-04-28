@@ -12,3 +12,19 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Big John PRO';
+  src: url('../assets/bigjohnpro/BigJohnPRO-Regular.eot');
+  src: local('../assets/bigjohnpro/Big John PRO Regular'),
+    local('BigJohnPRO-Regular'),
+    url('../assets/bigjohnpro/BigJohnPRO-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('../assets/bigjohnpro/BigJohnPRO-Regular.woff2') format('woff2'),
+    url('../assets/bigjohnpro/BigJohnPRO-Regular.woff') format('woff'),
+    url('../assets/bigjohnpro/BigJohnPRO-Regular.ttf') format('truetype'),
+    url('../assets/bigjohnpro/BigJohnPRO-Regular.svg#BigJohnPRO-Regular')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

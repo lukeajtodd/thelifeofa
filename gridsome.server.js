@@ -1,29 +1,12 @@
-const { setContext } = require('apollo-link-context');
-const { HttpLink } = require('apollo-link-http');
-const { introspectSchema, makeRemoteExecutableSchema } = require('graphql-tools');
-const fetch = require('node-fetch');
-const { uri, token } = require('./credentials');
-
 module.exports = function(api) {
-  api.createSchema(async function(graphql) {
-    const http = new HttpLink({
-      uri,
-      fetch
-    });
+  api.loadSource(store => {
+    const posts = store.getContentType('Post');
 
-    const link = setContext((_, { headers }) => ({
-      headers: {
-        ...headers,
-        Authorization: token ? `Bearer ${token}` : ''
+    posts.addSchemaField('category', ({ graphql }) => ({
+      type: graphql.GraphQLString,
+      resolve(node, _) {
+        return node.fields.category;
       }
-    })).concat(http);
-
-    const schema = await introspectSchema(link);
-    const executableSchema = await makeRemoteExecutableSchema({
-      schema,
-      link
-    });
-
-    return executableSchema;
+    }));
   });
 };

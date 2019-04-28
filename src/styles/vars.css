@@ -1,4 +1,6 @@
 :root {
   --primary: #030045;
   --header: #d8fcff;
+
+  --bar-width: 8px;
 }

@@ -25,6 +25,7 @@ export default {
 
 <style lang="postcss">
 .layout {
+  position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
