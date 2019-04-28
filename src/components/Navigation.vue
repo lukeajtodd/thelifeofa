@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav" :class="{ 'nav--open': open }">
+  <nav @click="closeNav" class="nav" :class="{ 'nav--open': open }">
     <div class="nav__inner">
       <ul class="nav__upper">
         <li class="nav__item">
@@ -12,9 +12,9 @@
       <h3 class="nav__header">Recent</h3>
       <ul class="nav__lower">
         <li class="nav__item" v-for="(post, i) in $static.posts.edges" :key="i">
-          <a class="nav__link" :href="`/blog/${post.node.slug}`">
+          <g-link class="nav__link" :to="`/blog/${post.node.slug}`">
             {{ post.node.title }}
-          </a>
+          </g-link>
         </li>
       </ul>
     </div>
@@ -42,6 +42,10 @@ export default {
   props: {
     open: {
       type: Boolean,
+      required: true
+    },
+    closeNav: {
+      type: Function,
       required: true
     }
   }

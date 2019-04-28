@@ -6,7 +6,7 @@
     <a class="close-button__wrapper" @click="toggleNav" v-else>
       <Close class="close-button" />
     </a>
-    <Navigation :open="open" />
+    <Navigation :open="open" :closeNav="closeNav" />
     <div class="left">
       <Stars class="stars-bg" />
       <g-link class="home-link" to="/">
@@ -194,6 +194,11 @@ export default {
   methods: {
     toggleNav() {
       this.open = !this.open;
+    },
+    closeNav(e) {
+      if (e.target && e.target.tagName === 'A') {
+        this.open = false;
+      }
     },
     resizeHandler() {
       if (window.innerWidth < 1280) {
