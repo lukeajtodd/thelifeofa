@@ -37,9 +37,9 @@ li {
 
     &::before {
       position: absolute;
-      left: -30px;
+      right: -30px;
       top: 50%;
-      transform: translate(-100%, -50%);
+      transform: translate(100%, -50%) scaleX(-1);
       width: 30px;
     }
 
@@ -60,6 +60,9 @@ li {
   @media screen and (min-width: $breakpoint-md) {
     &__link::before {
       width: 40px;
+      right: auto;
+      left: -30px;
+      transform: translate(-100%, -50%);
     }
   }
 }

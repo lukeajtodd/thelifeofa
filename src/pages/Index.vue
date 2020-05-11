@@ -125,14 +125,18 @@ $breakpoint-lg: 1700px;
     margin-bottom: 1rem;
   }
 
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   @media screen and (min-width: $breakpoint-md) {
     margin-top: auto;
     text-align: right;
     padding-right: 72px;
 
     ul {
-      display: flex;
-      flex-direction: column;
       align-items: flex-end;
     }
   }
