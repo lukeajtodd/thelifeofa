@@ -10,7 +10,10 @@
     <div class="left">
       <Stars class="stars-bg" />
       <g-link class="home-link" to="/">
-        <h1>the life of a</h1>
+        <h1>
+          <span>Luke</span>
+          <span>Todd</span>
+        </h1>
       </g-link>
       <City class="city-bg" />
       <Earth class="earth-bg" />
@@ -38,6 +41,12 @@ $breakpoint-lg: 1700px;
 
 .home-link {
   color: var(--header);
+
+  h1 {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
 }
 
 .menu-button,
@@ -68,7 +77,7 @@ $breakpoint-lg: 1700px;
 }
 
 .left {
-  flex: 0 0 100%;
+  flex: 0 0 80%;
   position: relative;
   background-color: var(--primary);
   color: var(--header);
@@ -80,21 +89,19 @@ $breakpoint-lg: 1700px;
   align-items: center;
 
   h1 {
-    font-size: responsive 80px 100px;
+    font-size: responsive 60px 100px;
     padding: 2rem;
     margin: 0;
     margin-bottom: 2rem;
+
+    span:first-child {
+      letter-spacing: responsive 5.5px 8px;
+    }
   }
 
   @media screen and (min-width: $breakpoint-md) {
     max-width: 1050px;
-  }
-}
-
-.left,
-.right {
-  @media screen and (min-width: $breakpoint-md) {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
   }
 }
 

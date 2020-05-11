@@ -105,7 +105,7 @@ $breakpoint-lg: 1700px;
 
 .bio {
   font-family: 'Lora';
-  padding-right: 20vw;
+  padding-right: 30vw;
   margin-bottom: 0;
 
   p:last-child {
@@ -128,6 +128,7 @@ $breakpoint-lg: 1700px;
   @media screen and (min-width: $breakpoint-md) {
     margin-top: auto;
     text-align: right;
+    padding-right: 72px;
 
     ul {
       display: flex;

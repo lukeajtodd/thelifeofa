@@ -9,14 +9,6 @@
           <g-link to="/human">Human</g-link>
         </li>
       </ul>
-      <h3 class="nav__header">Recent</h3>
-      <ul class="nav__lower">
-        <li class="nav__item" v-for="(post, i) in $static.posts.edges" :key="i">
-          <g-link class="nav__link" :to="`/blog/${post.node.slug}`">
-            {{ post.node.title }}
-          </g-link>
-        </li>
-      </ul>
     </div>
   </nav>
 </template>
