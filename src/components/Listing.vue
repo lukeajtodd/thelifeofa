@@ -30,16 +30,16 @@ li {
   &__link {
     display: block;
     position: relative;
-    font-family: 'Old Standard TT';
+    font-family: 'Lora';
     font-size: responsive 18px 20px;
     color: var(---black);
     padding: 0.25rem 0;
 
-    &::after {
+    &::before {
       position: absolute;
-      right: -30px;
+      left: -30px;
       top: 50%;
-      transform: translate(100%, -50%) scaleX(-1);
+      transform: translate(-100%, -50%);
       width: 30px;
     }
 
@@ -51,14 +51,14 @@ li {
     &:focus {
       text-decoration: underline;
 
-      &::after {
+      &::before {
         content: url('../assets/svg/shoot.svg');
       }
     }
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    &__link::after {
+    &__link::before {
       width: 40px;
     }
   }

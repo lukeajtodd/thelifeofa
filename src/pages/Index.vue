@@ -13,7 +13,7 @@
         <p>Hit me up 🤙</p>
       </div>
       <div class="recents">
-        <h3 class="recents__title">Recents</h3>
+        <h3 class="recents__title">Recent Posts</h3>
         <Listing :posts="$page.posts.edges" />
       </div>
     </div>
