@@ -2,9 +2,9 @@
   "name": "thelifeofa",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "build": "npx gridsome build",
+    "dev": "npx gridsome develop",
+    "explore": "npx gridsome explore"
   },
   "dependencies": {
     "apollo-link-context": "^1.0.17",
@@ -13,6 +13,8 @@
     "gridsome": "^0.5.0",
     "node-fetch": "^2.4.0",
     "perfect-scrollbar": "^1.4.0",
+    "typeface-inconsolata": "^0.0.72",
+    "typeface-lora": "^0.0.72",
     "typeface-old-standard-tt": "^0.0.71",
     "typeface-pt-sans": "^0.0.72"
   },
@@ -26,5 +28,8 @@
     "postcss-preset-env": "^6.6.0",
     "precss": "^4.0.0",
     "rucksack-css": "^1.0.2"
+  },
+  "volta": {
+    "node": "8.17.0"
   }
 }

@@ -13,29 +13,34 @@ export default {
   props: {
     posts: {
       type: Array,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
 <style lang="postcss" scoped>
 $breakpoint-md: 1280px;
 
+li {
+  display: inline-block;
+}
+
 .listing {
   &__link {
     display: block;
     position: relative;
     font-family: 'Old Standard TT';
-    font-size: responsive 40px 56px;
+    font-size: responsive 18px 20px;
     color: var(---black);
+    padding: 0.25rem 0;
 
-    &::before {
+    &::after {
       position: absolute;
-      left: -2vw;
+      right: -30px;
       top: 50%;
-      transform: translate(-100%, -50%);
-      width: 54px;
+      transform: translate(100%, -50%) scaleX(-1);
+      width: 30px;
     }
 
     &:visited {
@@ -46,15 +51,15 @@ $breakpoint-md: 1280px;
     &:focus {
       text-decoration: underline;
 
-      &::before {
+      &::after {
         content: url('../assets/svg/shoot.svg');
       }
     }
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    &__link::before {
-      width: 64px;
+    &__link::after {
+      width: 40px;
     }
   }
 }

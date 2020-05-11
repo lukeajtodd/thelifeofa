@@ -2,11 +2,13 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue';
-import 'typeface-pt-sans';
-import 'typeface-old-standard-tt';
+// import 'typeface-pt-sans';
+// import 'typeface-old-standard-tt';
+import 'typeface-lora';
+import 'typeface-inconsolata';
 import './styles/main.css';
 
-export default function(Vue, { router, head, isClient }) {
+export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
 }

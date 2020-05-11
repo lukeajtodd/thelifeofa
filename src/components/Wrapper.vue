@@ -101,13 +101,19 @@ $breakpoint-lg: 1700px;
 .right {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  padding-top: 100px;
   padding-bottom: 100px;
 
   @media screen and (min-width: $breakpoint-md) {
     overflow: hidden;
     flex: 1;
+
+    > * {
+      width: 100%;
+    }
   }
 }
 
@@ -235,4 +241,3 @@ export default {
   components: { Earth, City, Stars, Navigation, Menu, Close }
 };
 </script>
-

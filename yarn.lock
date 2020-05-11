@@ -8550,6 +8550,16 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-inconsolata@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-inconsolata/-/typeface-inconsolata-0.0.72.tgz#6b5c92132c7d3e83f7a17025087d8d717ada63d5"
+  integrity sha512-ITFhcI2ANWmSEPVgQgPJHh6RyiCf1pnkRXj1VxjsxfSwRrXFGgGITRJV+HxW7kTRDx+3/6RReT2/SWsMPqJaTA==
+
+typeface-lora@^0.0.72:
+  version "0.0.72"
+  resolved "https://registry.yarnpkg.com/typeface-lora/-/typeface-lora-0.0.72.tgz#850c211ef51167d8b71b610c93a9b1ca0f17863c"
+  integrity sha512-6Q029hpZAJOU2K0V3JM0xColUa/u/0xpzgN5nv1aKe019lNYp9u+6u+BF3zK7n+gwGAjrz75qdFxhM34fheSAA==
+
 typeface-old-standard-tt@^0.0.71:
   version "0.0.71"
   resolved "https://registry.yarnpkg.com/typeface-old-standard-tt/-/typeface-old-standard-tt-0.0.71.tgz#bad99ff4d1cd698e2e5373007276ee2fdd6746c2"

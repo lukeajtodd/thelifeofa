@@ -1,8 +1,21 @@
 <template>
   <Layout>
-    <div class="recents">
-      <h3 class="recents__title">Recents</h3>
-      <Listing :posts="$page.posts.edges" />
+    <div class="inner">
+      <h2 class="tagline">
+        Developer. Designer. おたく。
+      </h2>
+      <div class="bio">
+        <p>
+          Building user interfaces with JavaScript, HTML & CSS along with rock
+          solid APIs, always with a focus on the end-user experience.
+        </p>
+
+        <p>Hit me up 🤙</p>
+      </div>
+      <div class="recents">
+        <h3 class="recents__title">Recents</h3>
+        <Listing :posts="$page.posts.edges" />
+      </div>
     </div>
   </Layout>
 </template>
@@ -39,27 +52,58 @@ $breakpoint-sm: 750px;
 $breakpoint-md: 1280px;
 $breakpoint-lg: 1700px;
 
-.recents {
-  margin-top: 60px;
-  padding: 0 30px 0 72px;
+.inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-  &__title,
-  &__link {
-    text-align: right;
+.tagline,
+.bio,
+.recents {
+  padding: 0 30px 0 72px;
+  margin-bottom: 45px;
+}
+
+.tagline {
+  font-family: 'Inconsolata';
+  font-size: responsive 26px 32px;
+  margin-top: auto;
+}
+
+.bio {
+  font-family: 'Lora';
+  padding-right: 20vw;
+  margin-bottom: 0;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.recents {
+  margin-top: auto;
+  text-align: right;
+  margin-bottom: 0;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   &__title {
     font-family: 'Big John PRO';
     text-transform: uppercase;
-    font-size: responsive 28px 32px;
-  }
-
-  @media screen and (min-width: $breakpoint-md) {
-    margin-top: 25vh;
+    font-size: responsive 22px 24px;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 }
 
 p {
-  font-size: responsive;
+  font-size: responsive 16px 19px;
+  margin-top: 0;
+  line-height: 1.8;
 }
 </style>
