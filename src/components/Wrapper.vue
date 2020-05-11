@@ -104,12 +104,14 @@ $breakpoint-lg: 1700px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 75px;
 
   @media screen and (min-width: $breakpoint-md) {
     overflow: hidden;
     flex: 1;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     > * {
       width: 100%;

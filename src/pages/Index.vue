@@ -2,7 +2,7 @@
   <Layout>
     <div class="inner">
       <h2 class="tagline">
-        Developer. Designer. おたく。
+        <span>Developer. </span><span>Designer. </span><span>おたく。</span>
       </h2>
       <div class="bio">
         <p>
@@ -61,14 +61,46 @@ $breakpoint-lg: 1700px;
 .tagline,
 .bio,
 .recents {
-  padding: 0 30px 0 72px;
-  margin-bottom: 45px;
+  padding: 0 30px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 30px 0 72px;
+    margin-bottom: 45px;
+  }
 }
 
 .tagline {
+  display: flex;
+  flex-wrap: wrap;
   font-family: 'Inconsolata';
   font-size: responsive 26px 32px;
   margin-top: auto;
+
+  span {
+    display: inline-block;
+    margin-bottom: 10px;
+    flex: 0 1 100%;
+
+    &:last-child {
+      font-size: responsive 23px 29px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    align-items: center;
+
+    span {
+      flex: 0 1 auto;
+      margin-bottom: 0;
+      padding-right: 10px;
+
+      &:last-child {
+        margin-bottom: -5px;
+      }
+    }
+  }
 }
 
 .bio {
@@ -82,15 +114,8 @@ $breakpoint-lg: 1700px;
 }
 
 .recents {
-  margin-top: auto;
-  text-align: right;
+  margin-top: 45px;
   margin-bottom: 0;
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
 
   &__title {
     font-family: 'Big John PRO';
@@ -98,6 +123,17 @@ $breakpoint-lg: 1700px;
     font-size: responsive 22px 24px;
     margin-top: 0;
     margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    margin-top: auto;
+    text-align: right;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 }
 

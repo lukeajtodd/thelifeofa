@@ -31,7 +31,7 @@ li {
     display: block;
     position: relative;
     font-family: 'Lora';
-    font-size: responsive 18px 20px;
+    font-size: responsive 16px 20px;
     color: var(---black);
     padding: 0.25rem 0;
 
