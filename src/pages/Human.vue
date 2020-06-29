@@ -37,12 +37,11 @@ $breakpoint-md: 1280px;
 $breakpoint-lg: 1700px;
 
 .listing {
-  margin-top: 60px;
-  padding: 0 30px 0 72px;
+  padding: 0 30px;
 
   &__title,
   &__link {
-    text-align: right;
+    text-align: left;
   }
 
   &__title {
@@ -52,7 +51,8 @@ $breakpoint-lg: 1700px;
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    margin-top: 25vh;
+    margin-top: 60px;
+    padding-left: 72px;
   }
 }
 

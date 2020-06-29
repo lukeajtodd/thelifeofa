@@ -3,6 +3,9 @@
     <div class="nav__inner">
       <ul class="nav__upper">
         <li class="nav__item">
+          <g-link to="/">Home</g-link>
+        </li>
+        <li class="nav__item">
           <g-link to="/developer">Developer</g-link>
         </li>
         <li class="nav__item">

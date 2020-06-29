@@ -1,7 +1,10 @@
 <template>
   <ul>
     <li v-for="(post, i) in posts" :key="i">
-      <a class="listing__link" :href="`/blog/${post.node.slug}`">
+      <a
+        :class="`listing__link${alt ? ' listing__link--alt' : ''}`"
+        :href="`/blog/${post.node.slug}`"
+      >
         {{ post.node.title }}
       </a>
     </li>
@@ -14,6 +17,10 @@ export default {
     posts: {
       type: Array,
       required: true,
+    },
+    alt: {
+      type: Boolean,
+      default: false,
     },
   },
 };
@@ -58,11 +65,19 @@ li {
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    &__link::before {
-      width: 40px;
-      right: auto;
-      left: -30px;
-      transform: translate(-100%, -50%);
+    &__link {
+      &::before {
+        width: 40px;
+        transform: translate(-100%, -50%), scaleX(-1);
+      }
+
+      &--alt {
+        &::before {
+          transform: translate(-100%, -50%);
+          right: auto;
+          left: -30px;
+        }
+      }
     }
   }
 }

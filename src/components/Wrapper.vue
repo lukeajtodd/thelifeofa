@@ -11,8 +11,8 @@
       <Stars class="stars-bg" />
       <g-link class="home-link" to="/">
         <h1>
-          <span>Luke</span>
-          <span>Todd</span>
+          <span>Life of</span>
+          <span>a dev</span>
         </h1>
       </g-link>
       <City class="city-bg" />
@@ -89,13 +89,16 @@ $breakpoint-lg: 1700px;
   align-items: center;
 
   h1 {
-    font-size: responsive 60px 100px;
     padding: 2rem;
     margin: 0;
     margin-bottom: 2rem;
 
     span:first-child {
-      letter-spacing: responsive 5.5px 8px;
+      font-size: responsive 60px 100px;
+    }
+
+    span:last-child {
+      font-size: responsive 70px 118px;
     }
   }
 
@@ -109,12 +112,13 @@ $breakpoint-lg: 1700px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
+  padding-top: 30px;
   padding-bottom: 75px;
 
   @media screen and (min-width: $breakpoint-md) {
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     flex: 1;
     padding-top: 100px;

@@ -1,20 +1,15 @@
 <template>
   <Layout>
     <div class="inner">
-      <h2 class="tagline">
-        <span>Developer. </span><span>Designer. </span><span>おたく。</span>
-      </h2>
       <div class="bio">
         <p>
-          Building user interfaces with JavaScript, HTML & CSS along with rock
-          solid APIs, always with a focus on the end-user experience.
+          Telling stories about life, both personal and professional.
         </p>
-
-        <p>Hit me up 🤙</p>
+        <p>Stick around for a while. <span class="coffee-emoji">☕</span></p>
       </div>
       <div class="recents">
         <h3 class="recents__title">Recent Posts</h3>
-        <Listing :posts="$page.posts.edges" />
+        <Listing :posts="$page.posts.edges" :alt="true" />
       </div>
     </div>
   </Layout>
@@ -70,43 +65,16 @@ $breakpoint-lg: 1700px;
   }
 }
 
-.tagline {
-  display: flex;
-  flex-wrap: wrap;
-  font-family: 'Inconsolata';
-  font-size: responsive 26px 32px;
-  margin-top: auto;
-
-  span {
-    display: inline-block;
-    margin-bottom: 10px;
-    flex: 0 1 100%;
-
-    &:last-child {
-      font-size: responsive 23px 29px;
-      margin-bottom: 0;
-    }
-  }
-
-  @media screen and (min-width: $breakpoint-md) {
-    align-items: center;
-
-    span {
-      flex: 0 1 auto;
-      margin-bottom: 0;
-      padding-right: 10px;
-
-      &:last-child {
-        margin-bottom: -5px;
-      }
-    }
-  }
-}
-
 .bio {
   font-family: 'Lora';
   padding-right: 30vw;
   margin-bottom: 0;
+  margin-top: auto;
+  font-size: responsive 20px 24px;
+
+  .coffee-emoji {
+    font-size: responsive 24px 30px;
+  }
 
   p:last-child {
     margin-bottom: 0;

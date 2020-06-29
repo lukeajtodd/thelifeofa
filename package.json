@@ -1,6 +1,9 @@
 {
   "name": "thelifeofa",
   "private": true,
+  "engines": {
+    "node": ">=10.21.0 <12"
+  },
   "scripts": {
     "build": "npx gridsome build",
     "dev": "npx gridsome develop",
