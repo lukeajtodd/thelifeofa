@@ -1,12 +1,17 @@
-# Default starter for Gridsome
+# thelifeofa - Blog
 
-### 1. Install Gridsome CLI tool if you don't have
+## Stack
 
-`npm install --global @gridsome/cli`
+- Gridsome
+- GraphCMS
 
-### 2. Create a Gridsome project
+Blog built with Gridsome, making use of local markdown files for blog posts.
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+These can be categorised as either `dev` or `human`
+
+## Issues
+
+## Plans
+
+- Move styling into separate files
+- Remove test posts and add new articles
