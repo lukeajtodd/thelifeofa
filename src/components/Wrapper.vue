@@ -60,7 +60,7 @@ $breakpoint-lg: 1700px;
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 99;
+    z-index: 101;
     cursor: pointer;
   }
 
