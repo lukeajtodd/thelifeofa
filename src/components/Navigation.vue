@@ -57,7 +57,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background-color: var(--primary);
-  z-index: 98;
+  z-index: 100;
   transform: translateX(100%);
   transition: transform 0.3s linear;
   will-change: transform;
