@@ -59,7 +59,7 @@ export default {
   background-color: var(--primary);
   z-index: 98;
   transform: translateX(100%);
-  transition: transform 0.2s ease-in-cubic;
+  transition: transform 0.3s linear;
   will-change: transform;
 
   &--open {

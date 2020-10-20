@@ -51,7 +51,6 @@ $breakpoint-lg: 1700px;
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    margin-top: 60px;
     padding-left: 72px;
   }
 }

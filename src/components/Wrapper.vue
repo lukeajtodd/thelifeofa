@@ -41,6 +41,7 @@ $breakpoint-lg: 1700px;
 
 .home-link {
   color: var(--header);
+  z-index: 99;
 
   h1 {
     display: flex;
@@ -83,6 +84,7 @@ $breakpoint-lg: 1700px;
   color: var(--header);
   font-family: 'Big John PRO';
   overflow: hidden;
+  min-height: 400px;
 
   display: flex;
   justify-content: center;
@@ -100,6 +102,10 @@ $breakpoint-lg: 1700px;
     span:last-child {
       font-size: responsive 70px 118px;
     }
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    min-height: 760px;
   }
 
   @media screen and (min-width: $breakpoint-md) {

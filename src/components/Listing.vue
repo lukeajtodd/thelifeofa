@@ -30,12 +30,12 @@ export default {
 $breakpoint-md: 1280px;
 
 li {
-  display: inline-block;
+  display: block;
 }
 
 .listing {
   &__link {
-    display: block;
+    display: inline-block;
     position: relative;
     font-family: 'Lora';
     font-size: responsive 16px 20px;
